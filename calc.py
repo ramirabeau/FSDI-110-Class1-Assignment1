@@ -24,16 +24,21 @@ def clear():
 
 
 clear()
+
 print("Select your mathmatical operation.")
 
 print("1.  Addition")
 print("2.  Subtraction")
 print("3.  Multiplication")
 print("4.  Division")
-opr = int(input("Enter your Selection (1/2/3/4):  "))
-if (opr < 1 or opr > 4):
+print("5.  Exit")
+opr = int(input("Enter your Selection (1/2/3/4/5):  "))
+if (opr < 1 or opr > 5):
     print("You have made an invalid selection, choose another selection.")
-else:
+
+elif (opr == 5):
+    print("Good-bye")
+else:	
     num1 = int(input("Enter your first number:  "))
     num2 = int(input("Enter your second number:  "))
     if (opr == 1):
@@ -47,5 +52,6 @@ else:
             print(num1, " / ", num2, " = ", division(num1, num2))
         else:
             print("You cannot divide by zero.")
-
+ 
 clear()
+
